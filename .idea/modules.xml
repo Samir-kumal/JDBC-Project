@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CRUD/CRUD.iml" filepath="$PROJECT_DIR$/CRUD/CRUD.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JDBC-Project.iml" filepath="$PROJECT_DIR$/.idea/JDBC-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/crud/crud.iml" filepath="$PROJECT_DIR$/crud/crud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-two/project-two.iml" filepath="$PROJECT_DIR$/project-two/project-two.iml" />
+    </modules>
+  </component>
+</project>
