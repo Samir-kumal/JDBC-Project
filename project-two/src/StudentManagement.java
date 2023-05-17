@@ -78,13 +78,37 @@ public class StudentManagement {
         }
     }
 
+
+    public void viewStudent() throws SQLException {
+        System.out.println("Enter Student ID:");
+        int id = scanner.nextInt();
+        if (studentDAO.getStudentById(id) ==null){
+            System.out.println("No students found");
+
+        } else {
+            System.out.println("ID: " +studentDAO.getStudentById(id).getId());
+            System.out.println("NAME: " +studentDAO.getStudentById(id).getName());
+            System.out.println("EMAIL: " +studentDAO.getStudentById(id).getEmail());
+            System.out.println("PHONE: " +studentDAO.getStudentById(id).getPhoneNo());
+            System.out.println("FACULTY: " +studentDAO.getStudentById(id).getFaculty());
+        }
+        }
+
+
     public void viewAllStudents() throws SQLException {
         List<Student> students = studentDAO.getAllStudents();
+        System.out.printf("| %-2s | %-8s | %-20s | %10s | %4s |%n", "ID", "NAME", "EMAIL", "PHONE NO)", "FACULTY");
+
         if (students.isEmpty()) {
             System.out.println("No students found");
         } else {
             for (Student student : students) {
-                System.out.println(student);
+                System.out.print(" " +student.getId()+ "|");
+                System.out.print("     " + student.getName() + "|");
+                System.out.print("    " + student.getEmail()+ "|");
+                System.out.print(" " + student.getPhoneNo()+ "|");
+                System.out.print(" " + student.getFaculty()+ "|");
+                System.out.println();
             }
         }
     }

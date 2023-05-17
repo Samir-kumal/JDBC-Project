@@ -7,14 +7,17 @@ public class Main {
         StudentManagement studentManagement = new StudentManagement();
         int option ;
         while(true){
-            System.out.printf("--------------------------------%n");
+            System.out.printf("--------------------------------------%n");
             System.out.printf("    Please select any option    %n");
-            System.out.printf("--------------------------------%n");
-            System.out.println("| 1.Add a new user to the database |");
-            System.out.println("| 2.Update  user from the database |");
-            System.out.println("| 3.Delete  user from the database |");
-            System.out.println("| 4.View all students              |");
-            System.out.println("| 5.Quit                           |");
+            System.out.printf("--------------------------------------%n");
+            System.out.println("| 1.Add a new user to the database   |");
+            System.out.println("| 2.Update  user from the database   |");
+            System.out.println("| 3.Delete  user from the database   |");
+            System.out.println("| 4.Select a  user from the database |");
+            System.out.println("| 5.View all students                |");
+            System.out.println("| 6.Quit                             |");
+            System.out.printf("--------------------------------------%n");
+
             option = sc.nextInt();
             switch (option) {
                 case 1:
@@ -27,9 +30,12 @@ public class Main {
                     studentManagement.deleteStudent();
                     break;
                 case 4:
-                    studentManagement.viewAllStudents();
+                    studentManagement.viewStudent();
                     break;
                 case 5:
+                    studentManagement.viewAllStudents();
+                    break;
+                case 6:
                     System.out.println("Goodbye!");
                     System.exit(0);
                     break;
